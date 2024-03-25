@@ -3,3 +3,8 @@ imgbbpy
 aiohttp
 Pyrogram
 TgCrypto
+freeimagehost
+hydrogram
+tgcrypto
+uvloop
+python-dotenv
