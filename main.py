@@ -51,13 +51,13 @@ async def new_members(cl: Client, m: Message):
 async def start_cmd(cl: Client, m: Message):
     await m.reply(
         f"👋 Hello {m.from_user.mention} I'm a bot that can **turn your images into links**, **maximum 10 MB** (__so "
-        'that the telegram preview works__) I also support groups.\n\n__Created By @samuel_ks__',
+        'that the telegram preview works__)\n\n__Enjoy__',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        '➕ Add me to a group',
-                        url=f'https://t.me/{cl.me.username}?startgroup'
+                        'Bots Channel',
+                        url=f'https://t.me/botsnano'
                     )
                 ]
             ]
@@ -110,7 +110,7 @@ async def send_image_link(_, m: Message):
 
 @bot.on_message(filters.command('repo'))
 async def send_repo(_, m: Message):
-    await m.reply('https://github.com/samuelmarc/ImageUploaderBot')
+    await m.reply('It's a private repo')
 
 
 async def main():
