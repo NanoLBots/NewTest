@@ -110,7 +110,7 @@ async def send_image_link(_, m: Message):
 
 @bot.on_message(filters.command('repo'))
 async def send_repo(_, m: Message):
-    await m.reply('It's a private repo')
+    await m.reply('It is a private repo')
 
 
 async def main():
