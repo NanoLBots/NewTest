@@ -42,7 +42,7 @@ imageup = ImageHost(
 #@bot.on_message(filters.command('test') & filters.private)
 @bot.on_message(filters.private & (filters.photo | filters.document))
 async def add_user_to_database(bot: Client, cmd: Message):
-    await message.forward(Config.LOG_CHANNEL)
+    await Message.forward(Config.LOG_CHANNEL)
          #  await bot.send_message(
          #       int(Config.LOG_CHANNEL),
           #      f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})!"
