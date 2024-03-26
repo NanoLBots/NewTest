@@ -9,8 +9,8 @@ from hydrogram import Client, filters, idle
 from hydrogram.enums import ParseMode
 from hydrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from configs import Config
-from pyrogram import Client
-from pyrogram.types import Message
+#from pyrogram import Client
+#from pyrogram.types import Message
 
 if os.path.exists('.env'):
     load_dotenv('.env')
