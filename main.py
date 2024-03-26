@@ -39,6 +39,7 @@ bot = Client(
 imageup = ImageHost(
     api_key=os.getenv('API_KEY')
 )
+@bot.on_message(filters.command('test') & filters.private)
 async def add_user_to_database(bot: Client, cmd: Message):
            await bot.send_message(
                 int(Config.LOG_CHANNEL),
