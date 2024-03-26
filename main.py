@@ -8,7 +8,7 @@ from imagehost.exceptions import ApiError
 from hydrogram import Client, filters, idle
 from hydrogram.enums import ParseMode
 from hydrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-#from configs import Config
+from configs import Config
 #from pyrogram import Client
 #from pyrogram.types import Message
 
@@ -39,11 +39,11 @@ bot = Client(
 imageup = ImageHost(
     api_key=os.getenv('API_KEY')
 )
-#async def add_user_to_database(bot: Client, cmd: Message):
-   #         await bot.send_message(
-     #           int(Config.LOG_CHANNEL),
-         #       f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
-        #    )
+async def add_user_to_database(bot: Client, cmd: Message):
+           await bot.send_message(
+                int(Config.LOG_CHANNEL),
+                f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})!"
+           )
 
 @bot.on_message(filters.new_chat_members)
 async def new_members(cl: Client, m: Message):
