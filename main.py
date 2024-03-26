@@ -9,7 +9,6 @@ from hydrogram import Client, filters, idle
 from hydrogram.enums import ParseMode
 from hydrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from configs import Config
-from handlers.database import db
 from pyrogram import Client
 from pyrogram.types import Message
 
