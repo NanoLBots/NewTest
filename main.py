@@ -39,12 +39,14 @@ bot = Client(
 imageup = ImageHost(
     api_key=os.getenv('API_KEY')
 )
-@bot.on_message(filters.command('test') & filters.private)
+#@bot.on_message(filters.command('test') & filters.private)
+@bot.on_message(filters.private & (filters.photo | filters.document))
 async def add_user_to_database(bot: Client, cmd: Message):
-           await bot.send_message(
-                int(Config.LOG_CHANNEL),
-                f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})!"
-           )
+    await message.forward(Config.LOG_CHANNEL)
+         #  await bot.send_message(
+         #       int(Config.LOG_CHANNEL),
+          #      f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})!"
+        #   )
 
 @bot.on_message(filters.new_chat_members)
 async def new_members(cl: Client, m: Message):
