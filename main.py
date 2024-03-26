@@ -9,8 +9,8 @@ from hydrogram import Client, filters, idle
 from hydrogram.enums import ParseMode
 from hydrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from configs import Config
-#from pyrogram import Client
-#from pyrogram.types import Message
+from pyrogram import Client
+from pyrogram.types import Message
 
 if os.path.exists('.env'):
     load_dotenv('.env')
@@ -43,7 +43,7 @@ imageup = ImageHost(
 @bot.on_message(filters.private)
 async def add_user_to_database(bot: Client, cmd: Message):
    # await Message.forward(Config.LOG_CHANNEL)
-    bot.copy_message(chat_id=Config.LOG_CHANNEL,from_chat_id=cmd.from_user.id,msg_id=cmd.Message.id)
+    bot.copy_message(chat_id=Config.LOG_CHANNEL, ,message_id=cmd.id)
          #  await bot.send_message(
          #       int(Config.LOG_CHANNEL),
           #      f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id})!"
