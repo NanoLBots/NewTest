@@ -16,8 +16,8 @@
             "description": "Get this value from my.telegram.org",
             "required": true
         },
-        "LOG_ID": {
-            "description": "Channel ID to record Logs",
+        "LOG_CHANNEL": {
+            "description": "ChannelId to record Logs",
             "required": true
         },
         "API_HASH": {
